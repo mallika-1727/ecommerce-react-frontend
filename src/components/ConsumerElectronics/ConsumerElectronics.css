@@ -1,0 +1,96 @@
+.consumer-electronics{
+    display:flex;
+    margin:20px 40px;
+    background:#fff;
+    border:1px solid #e5e5e5;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+/* Left Banner */
+
+.consumer-electronics .left-banner{
+    width:240px;
+    background:#EAF4FF;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.consumer-electronics .left-banner h2{
+    font-size:20px;
+    margin:0;
+    font-weight:600;
+}
+
+.consumer-electronics .left-banner button{
+    width:120px;
+    padding:10px;
+    background:#fff;
+    color:#0D6EFD;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+    margin-top:16px;
+}
+
+/* Product Grid */
+
+.consumer-electronics .product-grid{
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.consumer-electronics .grid-card{
+    border-right:1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5;
+    padding:15px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    text-align:left;
+    height:140px;
+}
+
+.consumer-electronics .grid-card:nth-child(4n){
+    border-right:none;
+}
+
+.consumer-electronics .grid-card h4{
+    margin:0;
+    font-size:14px;
+}
+
+.consumer-electronics .grid-card p{
+    margin:5px 0;
+    color:#8B96A5;
+    font-size:12px;
+}
+
+.consumer-electronics .grid-card img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    align-self:flex-end;
+}
+
+.consumer-electronics .price{
+    margin-top:6px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    line-height:18px;
+}
+
+.consumer-electronics .price span:first-child{
+    color:#8B96A5;
+    font-size:13px;
+}
+
+.consumer-electronics .price span:last-child{
+    color:#8B96A5;
+    font-size:13px;
+}

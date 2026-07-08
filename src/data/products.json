@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Smart Watch",
+    "price": 99,
+   "image": "8.jpg",
+    "description": "Latest smart watch with fitness tracking.",
+    "category": "Electronics",
+    "stock": "In Stock"
+  },
+  {
+    "id": 2,
+    "name": "Laptop",
+    "price": 799,
+   "image": "7.jpg",
+    "description": "Powerful laptop for work and study.",
+    "category": "Electronics",
+    "stock": "In Stock"
+  },
+  {
+    "id": 3,
+    "name": "Headphones",
+    "price": 59,
+      "image": "9.jpg",
+    "description": "Wireless Bluetooth headphones.",
+    "category": "Electronics",
+    "stock": "In Stock"
+  },
+  {
+    "id": 4,
+    "name": "Camera",
+    "price": 499,
+       "image": "6.jpg",
+    "description": "Professional DSLR Camera.",
+    "category": "Electronics",
+    "stock": "Limited Stock"
+  },
+  {
+    "id": 5,
+    "name": "Running Shoes",
+    "price": 89,
+      "image": "1.jpg",
+    "description": "Comfortable running shoes.",
+    "category": "Shoes",
+    "stock": "In Stock"
+  },
+  {
+    "id": 6,
+    "name": "T-Shirt",
+    "price": 25,
+    "image": "4pagecloth.jpg",
+    "description": "Cotton casual T-Shirt.",
+    "category": "Clothing",
+    "stock": "In Stock"
+  },
+  {
+    "id": 7,
+    "name": "Backpack",
+    "price": 45,
+      "image": "5.jpg",
+    "description": "Travel backpack.",
+    "category": "Accessories",
+    "stock": "Out of Stock"
+  },
+  {
+    "id": 8,
+    "name": "Coffee Maker",
+    "price": 120,
+    "image": "2.png",
+    "description": "Automatic coffee machine.",
+    "category": "Home",
+    "stock": "In Stock"
+  },
+  {
+    "id": 9,
+    "name": "Office Chair",
+    "price": 199,
+    "image": "3.jpg",
+    "description": "Comfortable office chair.",
+    "category": "Furniture",
+    "stock": "Limited Stock"
+  },
+  {
+    "id": 10,
+    "name": "Gaming Mouse",
+    "price": 39,
+    "image": "4.jpg",
+    "description": "RGB Gaming Mouse.",
+    "category": "Electronics",
+    "stock": "In Stock"
+  }
+]

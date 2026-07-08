@@ -1,0 +1,81 @@
+.filter-sidebar{
+    width:260px;
+}
+
+.filter-box{
+    background:#fff;
+    border:1px solid #E5E7EB;
+    border-radius:6px;
+    padding:15px;
+    margin-bottom:15px;
+    text-align:left;
+}
+
+.filter-box h4{
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.filter-box p{
+    margin:8px 0;
+    cursor:pointer;
+}
+
+.filter-box label{
+    display:block;
+    margin:8px 0;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.filter-box span{
+    color:#0D6EFD;
+    cursor:pointer;
+}
+
+.filter-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.filter-heading h4{
+    margin:0;
+}
+
+.filter-box input[type="text"]{
+    width:100%;
+    padding:8px;
+    margin-bottom:10px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+.apply-btn{
+    width:100%;
+    padding:10px;
+    background:#0D6EFD;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.filter-box input[type="radio"]{
+    accent-color:#0D6EFD;
+}
+
+.price-inputs{
+    display:flex;
+    gap:10px;
+    margin:10px 0;
+}
+
+.price-inputs input{
+    flex:1;
+    padding:8px;
+    border:1px solid #ddd;
+    border-radius:5px;
+}

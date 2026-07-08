@@ -1,0 +1,72 @@
+.product-description{
+    flex:1;
+    background:#fff;
+    border:1px solid #DEE2E7;
+    border-radius:6px;
+    padding:20px;
+}
+
+.tabs{
+    display:flex;
+    gap:30px;
+    border-bottom:1px solid #E5E7EB;
+    margin-bottom:20px;
+}
+
+.tabs button{
+    background:none;
+    border:none;
+    padding:15px 0;
+    cursor:pointer;
+    color:#8B96A5;
+    font-size:15px;
+}
+
+.tabs .active{
+    color:#0D6EFD;
+    border-bottom:2px solid #0D6EFD;
+}
+
+.description-content p{
+    line-height:28px;
+    color:#505050;
+    text-align:left;
+}
+
+table{
+    width:400px;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+table td{
+    border:1px solid #E5E7EB;
+    padding:10px;
+    text-align:left;
+}
+
+table td:frist-child{
+    background:#EFF2F4;
+    color:#505050;
+    font-weight:500;
+}
+
+ul{
+    padding-left:20px;
+  
+}
+
+ul li{
+    margin:10px 0;
+    color:#505050;
+      text-align:left;
+}
+
+.feature-list{
+    list-style:none;
+    padding-left:0;
+}
+
+.feature-list li{
+    margin:10px 0;
+}

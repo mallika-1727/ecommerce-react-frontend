@@ -1,0 +1,25 @@
+.product-top-section{
+    display:flex;
+    gap:20px;
+    padding:20px 40px;
+    align-items:flex-start;
+    text-align:left;
+}
+
+.product-middle-section{
+    display:flex;
+    gap:20px;
+    padding:0 40px 20px;
+    align-items:flex-start;
+}
+
+.product-wrapper{
+    display:flex;
+    gap:20px;
+    background:#fff;
+    border:1px solid #DEE2E7;
+    border-radius:6px;
+    padding:20px;
+    margin:20px 40px;
+    align-items:flex-start;
+}

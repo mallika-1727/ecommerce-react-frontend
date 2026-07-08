@@ -1,0 +1,220 @@
+.hero{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:20px 40px;
+    background:#F7FAFC;
+}
+
+/* Left Menu */
+
+.left-menu{
+    width:220px;
+    background:#fff;
+    border:1px solid #E5E7EB;
+    border-radius:6px;
+}
+
+.left-menu ul{
+    list-style:none;
+    margin:0;
+    padding:10px 0;
+}
+
+.left-menu li{
+    padding:12px 16px;
+    cursor:pointer;
+    font-size:15px;
+    text-align:left;
+}
+
+.left-menu li:hover{
+    background:#E5F1FF;
+    color:#0D6EFD;
+}
+
+.left-menu .active{
+    background:#E5F1FF;
+    color:black;
+    font-weight:600;
+}
+
+/* Banner */
+/*.banner{
+    flex:1;
+    height:380px;
+    border-radius:8px;
+
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:40px;
+}*/
+.banner{
+    flex:1;
+    height:380px;
+    border-radius:8px;
+
+    background-image: url("../../assets/banner.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    padding-left:40px;
+}
+
+
+
+.banner-image{
+    width:330px;
+    height:auto;
+    object-fit:contain;
+}
+
+
+
+.hero-content h4{
+    font-size:28px;
+    font-weight:400;
+    color:#1C1C1C;
+    margin:0;
+}
+
+.hero-content h1{
+    font-size:38px;
+    line-height:48px;
+    margin:5px 0 20px;
+    font-weight:400;
+}
+
+.hero-content h1 span{
+    background:#D9ECFF;
+    padding:4px 12px;
+    font-weight:700;
+    display:inline-block;
+}
+
+.hero-content button{
+    background:#fff;
+    border:1px solid #DEE2E7;
+    border-radius:6px;
+    padding:12px 22px;
+    font-size:15px;
+    cursor:pointer;
+}
+
+/* Right Cards */
+
+.right-card{
+    width:220px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.user-card{
+    background:#E3F0FF;
+    padding:20px;
+    border-radius:8px;
+    text-align:center;
+}
+
+.user-icon{
+    font-size:50px;
+    color:#8CB7F5;
+    margin-bottom:10px;
+}
+
+.user-card h4{
+    margin:5px 0;
+}
+
+.user-card p{
+    color:#666;
+    margin-bottom:15px;
+}
+
+.user-card button{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:8px;
+}
+
+.user-card button:first-of-type{
+    background:#0D6EFD;
+    color:#fff;
+}
+
+.user-card button:last-of-type{
+    background:#fff;
+    color:#0D6EFD;
+    border:1px solid #0D6EFD;
+}
+
+.offer{
+    padding:20px;
+    color:#fff;
+    border-radius:8px;
+    font-size:15px;
+    line-height:24px;
+}
+
+.orange{
+    background:#F38332;
+}
+
+.blue{
+    background:#55BDC3;
+}
+
+
+
+/* Mobile Responsive */
+@media (max-width:768px){
+
+    .hero{
+        flex-direction: column;
+        padding:15px;
+        gap:15px;
+    }
+
+    .left-menu,
+    .banner,
+    .right-card{
+        width:100%;
+    }
+
+    .banner{
+        height:220px;
+        padding-left:20px;
+        background-position:center;
+        background-size:cover;
+    }
+
+    .hero-content h4{
+        font-size:20px;
+    }
+
+    .hero-content h1{
+        font-size:28px;
+        line-height:34px;
+    }
+
+    .right-card{
+        flex-direction:column;
+    }
+
+    .left-menu li{
+        font-size:14px;
+        padding:10px 14px;
+    }
+}

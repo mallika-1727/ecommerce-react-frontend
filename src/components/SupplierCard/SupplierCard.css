@@ -1,0 +1,61 @@
+.supplier-card{
+   width:220px;
+   display:flex;
+   flex-direction:column;
+   gap:12px;
+   flex-shrink:0;
+}
+
+.supplier-header{
+    display:flex;
+    gap:10px;
+    align-items:left;
+    margin-bottom:15px;
+    text-align:left;
+
+}
+
+.company-logo{
+    width:50px;
+    height:50px;
+    background:#C6F3D5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:6px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.supplier-card h4{
+    margin:0;
+}
+
+.supplier-card p{
+    margin:10px 0;
+    color:#555;
+    font-size:14px;
+    text-align:left;
+}
+
+.send-btn{
+    width:100%;
+    padding:10px;
+    background:#0D6EFD;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:15px;
+    
+}
+
+.profile-btn{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    border:1px solid #DEE2E7;
+    background:#fff;
+    border-radius:6px;
+    cursor:pointer;
+}
