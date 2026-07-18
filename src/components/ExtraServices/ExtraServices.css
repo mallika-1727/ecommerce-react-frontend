@@ -35,3 +35,37 @@
     font-size:15px;
     line-height:22px;
 }
+
+/* media query */
+/* Mobile Responsive */
+
+@media screen and (max-width:768px){
+
+.extra-services{
+    margin:15px;
+}
+
+.extra-services h2{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.service-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.service-card img{
+    height:100px;
+}
+
+.service-content{
+    padding:12px;
+}
+
+.service-content h4{
+    font-size:14px;
+    line-height:20px;
+}
+
+}

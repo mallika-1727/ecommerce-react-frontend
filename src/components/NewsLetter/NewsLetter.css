@@ -35,3 +35,46 @@
     border-radius:6px;
     cursor:pointer;
 }
+
+/* media query */
+
+/* Mobile Responsive */
+
+@media screen and (max-width:768px){
+
+.newsletter{
+    padding:25px 15px;
+    margin-top:20px;
+}
+
+.newsletter h2{
+    font-size:22px;
+    line-height:30px;
+}
+
+.newsletter p{
+    font-size:14px;
+    line-height:22px;
+    margin:12px 0 20px;
+}
+
+.newsletter-form{
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+}
+
+.newsletter-form input{
+    width:100%;
+    max-width:350px;
+    box-sizing:border-box;
+}
+
+.newsletter-form button{
+    width:100%;
+    max-width:350px;
+    padding:14px;
+    font-size:15px;
+}
+
+}

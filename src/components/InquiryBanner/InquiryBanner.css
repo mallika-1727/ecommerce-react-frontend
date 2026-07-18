@@ -66,3 +66,53 @@
     border-radius:5px;
     cursor:pointer;
 }
+
+/* media query */
+
+/* Mobile Responsive */
+
+@media screen and (max-width:768px){
+
+.inquiry-banner{
+    flex-direction:column;
+    margin:15px;
+    padding:20px;
+    gap:20px;
+}
+
+.banner-content{
+    width:100%;
+    text-align:center;
+}
+
+.banner-content h2{
+    font-size:24px;
+    line-height:32px;
+}
+
+.banner-content p{
+    font-size:14px;
+}
+
+.inquiry-form{
+    width:100%;
+    box-sizing:border-box;
+}
+
+.form-row{
+    flex-direction:column;
+    gap:12px;
+}
+
+.form-row input,
+.form-row select{
+    width:100%;
+}
+
+.inquiry-form button{
+    width:100%;
+    padding:14px;
+    font-size:15px;
+}
+
+}

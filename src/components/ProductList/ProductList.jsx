@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import products from "../../data/products.json";
 import { FaRegHeart } from "react-icons/fa";
+import { CartContext } from "../../context/CartContext";
 import "./ProductList.css";
 const imageMap = {
   "1.jpg": new URL("../../assets/1.jpg", import.meta.url).href,
@@ -20,6 +21,8 @@ const imageMap = {
 
 function ProductList() {
 
+ const { addToCart } = useContext(CartContext);
+
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
 
@@ -33,6 +36,9 @@ const filteredProducts = products.filter((item) => {
 
   return matchesSearch && matchesCategory;
 });
+
+ 
+
 
   return (
     <div className="product-list">
@@ -125,6 +131,14 @@ const filteredProducts = products.filter((item) => {
       >
         View Details
       </Link>
+
+   <button
+  className="add-cart-btn"
+  onClick={() => addToCart(item)}
+>
+  Add to Cart
+</button>
+
 
     </div>
 

@@ -171,3 +171,86 @@
     color: inherit;
 }
 
+/* ===========================
+   Product Grid Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .grid-top{
+    flex-direction:column;
+    align-items:stretch;
+    gap:12px;
+    padding:15px;
+  }
+
+  .items-count{
+    font-size:14px;
+  }
+
+  .top-right{
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:space-between;
+  }
+
+  .top-right select{
+    width:100%;
+  }
+
+  .filter-tags{
+    display:flex;
+    overflow-x:auto;
+    gap:10px;
+    padding-bottom:8px;
+    white-space:nowrap;
+    scrollbar-width:none;
+  }
+
+  .filter-tags::-webkit-scrollbar{
+    display:none;
+  }
+
+  .filter-tags span{
+    flex-shrink:0;
+  }
+
+  .products-grid{
+    grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  .grid-card{
+    flex-direction:column;
+    height:auto;
+    padding:15px;
+    align-items:center;
+  }
+
+  .grid-image{
+    width:100%;
+    height:180px;
+    border-bottom:none;
+    margin-bottom:15px;
+  }
+
+  .grid-image img{
+    width:150px;
+    height:150px;
+  }
+
+  .grid-content{
+    width:100%;
+    padding:0;
+  }
+
+  .grid-content h3{
+    font-size:18px;
+  }
+
+  .product-name{
+    font-size:14px;
+  }
+
+}
+

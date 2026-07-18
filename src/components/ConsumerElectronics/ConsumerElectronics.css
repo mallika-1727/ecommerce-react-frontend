@@ -94,3 +94,58 @@
     color:#8B96A5;
     font-size:13px;
 }
+
+/* media query */
+
+/* Mobile Responsive */
+
+@media screen and (max-width:768px){
+
+.consumer-electronics{
+    flex-direction:column;
+    margin:15px;
+}
+
+.consumer-electronics .left-banner{
+    width:100%;
+    min-height:180px;
+    box-sizing:border-box;
+}
+
+.consumer-electronics .left-banner h2{
+    font-size:24px;
+    line-height:32px;
+}
+
+.consumer-electronics .left-banner button{
+    width:140px;
+    margin-top:20px;
+}
+
+.consumer-electronics .product-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.consumer-electronics .grid-card{
+    height:160px;
+    padding:12px;
+}
+
+.consumer-electronics .grid-card:nth-child(2n){
+    border-right:none;
+}
+
+.consumer-electronics .grid-card img{
+    width:70px;
+    height:70px;
+}
+
+.consumer-electronics .grid-card h4{
+    font-size:14px;
+}
+
+.consumer-electronics .price span{
+    font-size:12px;
+}
+
+}

@@ -1,4 +1,6 @@
 import "./CartSummary.css";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 import {
   FaCcVisa,
   FaCcMastercard,
@@ -7,6 +9,19 @@ import {
 } from "react-icons/fa6";
 
 function CartSummary() {
+  const { cart } = useContext(CartContext);
+
+  const subtotal = cart.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+
+  const discount = subtotal > 500 ? 60 : 0;
+
+  const tax = subtotal * 0.01;
+
+  const total = subtotal - discount + tax;
+
   return (
     <div className="cart-summary">
 
@@ -27,36 +42,40 @@ function CartSummary() {
 
         <div className="summary-row">
           <span>Subtotal:</span>
-          <span>$1403.97</span>
+          <span>${subtotal.toFixed(2)}</span>
         </div>
 
         <div className="summary-row">
           <span>Discount:</span>
-          <span className="red">- $60.00</span>
+          <span className="red">
+            - ${discount.toFixed(2)}
+          </span>
         </div>
 
         <div className="summary-row">
           <span>Tax:</span>
-          <span className="green">+ $14.00</span>
+          <span className="green">
+            + ${tax.toFixed(2)}
+          </span>
         </div>
 
         <hr />
 
         <div className="summary-total">
           <span>Total:</span>
-          <strong>$1357.97</strong>
+          <strong>${total.toFixed(2)}</strong>
         </div>
 
         <button className="checkout-btn">
           Checkout
         </button>
-       <div className="payment-icons">
-  <FaCcVisa className="pay-icon visa" />
-  <FaCcMastercard className="pay-icon mastercard" />
-  <FaCcPaypal className="pay-icon paypal" />
-  <FaCcApplePay className="pay-icon applepay" />
-</div>
-       
+
+        <div className="payment-icons">
+          <FaCcVisa className="pay-icon visa" />
+          <FaCcMastercard className="pay-icon mastercard" />
+          <FaCcPaypal className="pay-icon paypal" />
+          <FaCcApplePay className="pay-icon applepay" />
+        </div>
 
       </div>
 

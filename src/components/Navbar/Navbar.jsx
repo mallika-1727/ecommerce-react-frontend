@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 import "./Navbar.css";
 import { FaUserAlt, FaShoppingCart,FaRegHeart } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
 
 function Navbar() {
+  const { cart } = useContext(CartContext);
   return (
     <>
       <div className="navbar">
@@ -39,8 +42,18 @@ function Navbar() {
           </div>
 
          <Link to="/cart" className="icon-link">
-  <div>
+  <div className="cart-icon-box">
     <FaShoppingCart />
+
+    {cart.length > 0 && (
+      <span className="cart-badge">
+        {cart.reduce(
+          (total, item) => total + item.quantity,
+          0
+        )}
+      </span>
+    )}
+
     <p>Cart</p>
   </div>
 </Link>

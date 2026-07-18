@@ -106,3 +106,60 @@
 }
 
 
+/* media query */
+
+/* Mobile Responsive */
+
+@media screen and (max-width:768px){
+
+.home-outdoor{
+    flex-direction:column;
+    margin:15px;
+}
+
+.left-banner{
+    width:100%;
+    min-height:180px;
+    background-size:cover;
+    background-position:center;
+    box-sizing:border-box;
+}
+
+.left-banner h2{
+    font-size:24px;
+}
+
+.left-banner button{
+    width:140px;
+    margin-top:20px;
+}
+
+.product-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.grid-card{
+    height:160px;
+    padding:12px;
+}
+
+.grid-card:nth-child(2n){
+    border-right:none;
+}
+
+.grid-card img{
+    width:70px;
+    height:70px;
+}
+
+.grid-card h4{
+    font-size:14px;
+}
+
+.price span{
+    font-size:12px;
+}
+
+}
+
+

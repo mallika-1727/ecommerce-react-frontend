@@ -1,5 +1,7 @@
 .suppliers{
     margin:30px 40px;
+    width:100%;
+    box-sizing:border-box;
 }
 
 .suppliers h2{
@@ -9,7 +11,7 @@
 
 .supplier-grid{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:20px;
 }
 
@@ -17,6 +19,7 @@
     display:flex;
     align-items:center;
     gap:10px;
+    min-width:0;
 }
 
 .supplier-card img{
@@ -34,4 +37,46 @@
     margin:2px 0 0;
     font-size:12px;
     color:#8B96A5;
+}
+
+/* media query */
+
+/* Mobile Responsive */
+
+@media screen and (max-width:768px){
+
+.suppliers{
+    margin:15px;
+    width:auto;
+}
+
+.suppliers h2{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.supplier-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.supplier-card{
+    align-items:flex-start;
+    gap:8px;
+}
+
+.supplier-card img{
+    width:24px;
+    height:24px;
+}
+
+.supplier-card h4{
+    font-size:13px;
+    line-height:18px;
+}
+
+.supplier-card p{
+    font-size:11px;
+}
+
 }

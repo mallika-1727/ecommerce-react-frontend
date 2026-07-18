@@ -36,3 +36,43 @@
     font-size:14px;
     color:#666;
 }
+
+/* media query */
+
+/* Mobile Responsive */
+
+@media screen and (max-width:768px){
+
+.recommended{
+    margin:15px;
+}
+
+.recommended h2{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.recommended-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.recommended-card{
+    padding:12px;
+}
+
+.recommended-card img{
+    width:90px;
+    height:90px;
+}
+
+.recommended-card h4{
+    font-size:16px;
+}
+
+.recommended-card p{
+    font-size:13px;
+    line-height:18px;
+}
+
+}

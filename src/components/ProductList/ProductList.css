@@ -1,5 +1,7 @@
 .product-list{
     flex:1;
+    min-width:0;
+    width:100%;
 }
 
 .product-top{
@@ -20,7 +22,8 @@
 .top-right{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:10px;
+    flex-wrap:wrap;
 }
 
 .top-right label{
@@ -217,4 +220,133 @@
     background:#EFF2F4;
     font-weight:600;
     color:#1c1c1c;
+}
+
+/* week3 */
+
+.add-cart-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-cart-btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* =========================
+   Product Listing Mobile
+========================= */
+
+@media (max-width:768px){
+   
+   .product-top input[type="text"],
+.product-top select{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+
+.top-right > *{
+    max-width:100%;
+}
+
+  .product-top{
+  overflow:hidden;
+  }
+
+  .items-count{
+    font-size:14px;
+  }
+
+  .product-top .search-box{
+    width:100%;
+  }
+
+  .product-top select{
+    width:100%;
+  }
+
+  .top-right{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:space-between;
+  }
+
+  .top-right select{
+    flex:1;
+    min-width:120px;
+  }
+
+  .top-right button{
+    width:45px;
+    height:40px;
+  }
+
+  .product-card{
+    flex-direction:column !important;
+    align-items:center !important;
+    padding:15px;
+    gap:15px !important;
+  }
+
+  .wishlist{
+    top:12px;
+    right:12px;
+  }
+
+  .product-image{
+    width:160px;
+    height:160px;
+    min-width:auto;
+  }
+
+  .product-details{
+    width:100%;
+    text-align:left;
+  }
+
+  .product-details h3{
+    font-size:18px;
+  }
+
+  .price{
+    flex-wrap:wrap;
+  }
+
+  .rating{
+    font-size:13px;
+  }
+
+  .description{
+    font-size:14px;
+    line-height:22px;
+  }
+
+  .add-cart-btn{
+    width:100%;
+    margin-top:15px;
+  }
+
+  .pagination{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+
+  .show-more{
+    width:100%;
+  }
+
+
+  
+
 }

@@ -23,3 +23,25 @@
     margin: auto;
     overflow-x: hidden;
 }
+
+/* ===========================
+   Product Grid Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .grid-container{
+    flex-direction:column;
+    padding:15px;
+    gap:15px;
+  }
+
+  .grid-filter-sidebar{
+    width:100%;
+  }
+
+  .product-grid-list{
+    width:100%;
+  }
+
+}

@@ -37,13 +37,15 @@
 
 /* Mobile View */
 @media (max-width:768px){
-
-    .category-bar{
-        padding:10px 15px;
-        overflow-x:auto;
-        white-space:nowrap;
-        scrollbar-width:none;
-    }
+     .category-bar{
+    padding:12px 15px;
+    overflow-x:auto;
+    white-space:nowrap;
+    scrollbar-width:none;
+    display:flex;
+    align-items:center;
+}
+    
 
     .category-bar::-webkit-scrollbar{
         display:none;
@@ -51,17 +53,22 @@
 
     .left-links{
         display:flex;
-        gap:18px;
+        align-items:center;
+        gap:20px;
         flex-wrap:nowrap;
-        flex-shrink:0;
+        width:max-content;
     }
 
     .right-links{
-        display:none;
+          display:flex;
+    gap:20px;
+    margin-left:20px;
+    flex-shrink:0;
     }
 
     .left-links a{
-        font-size:13px;
+        font-size:14px;
         white-space:nowrap;
+        padding:6px 0;
     }
 }

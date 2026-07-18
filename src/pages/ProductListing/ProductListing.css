@@ -72,3 +72,25 @@
     min-height:220px;
 }
 
+/* ===========================
+   Mobile Responsive
+=========================== */
+
+@media (max-width:768px){
+
+  .listing-container{
+    flex-direction: column;
+    padding:15px;
+    gap:15px;
+  }
+
+  .filter-sidebar{
+    width:100%;
+  }
+
+  .product-list{
+    width:100%;
+  }
+
+}
+
