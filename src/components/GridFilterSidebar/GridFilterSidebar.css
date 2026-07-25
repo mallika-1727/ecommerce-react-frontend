@@ -90,3 +90,34 @@
     cursor:pointer;
     font-size:14px;
 }
+
+/* ===========================
+   Grid Filter Sidebar Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .grid-filter-sidebar{
+    width:100%;
+    margin-left:0;
+  }
+
+  .filter-box{
+    margin-bottom:15px;
+    padding:15px;
+  }
+
+  .filter-section{
+    padding:15px 0;
+  }
+
+  .filter-heading h4{
+    font-size:15px;
+  }
+
+  .filter-box p,
+  .filter-box label{
+    font-size:14px;
+  }
+
+}

@@ -47,3 +47,52 @@
     color:#8B96A5;
     font-size:14px;
 }
+
+
+/* ===========================
+   Related Products Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .related-products{
+    margin:15px;
+    padding:15px;
+  }
+
+  .related-products h3{
+    font-size:18px;
+    margin-bottom:15px;
+  }
+
+  .related-list{
+    display:flex;
+    overflow-x:auto;
+    gap:15px;
+    padding-bottom:8px;
+    scrollbar-width:none;
+  }
+
+  .related-list::-webkit-scrollbar{
+    display:none;
+  }
+
+  .related-card{
+    flex:0 0 160px;
+  }
+
+  .related-image{
+    width:160px;
+    height:160px;
+  }
+
+  .related-card h4{
+    font-size:14px;
+    margin-top:10px;
+  }
+
+  .related-card p{
+    font-size:13px;
+  }
+
+}

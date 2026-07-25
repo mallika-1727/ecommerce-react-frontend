@@ -209,3 +209,104 @@
     background:#0d6efd;
     transform:translateY(-2px);
 }
+
+
+/* ===========================
+   Cart Items Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .cart-items{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    box-sizing:border-box;
+  }
+
+  .cart-heading{
+    position:static;
+    margin-bottom:20px;
+    font-size:24px;
+  }
+
+  .cart-item{
+    flex-direction:column;
+    gap:15px;
+    align-items:flex-start;
+  }
+
+  .cart-image{
+    width:90px;
+    height:90px;
+  }
+
+  .cart-info{
+    width:100%;
+    margin-left:0;
+  }
+
+  .cart-info h4{
+    font-size:16px;
+  }
+
+  .cart-info p{
+    font-size:13px;
+  }
+
+  .cart-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:12px;
+  }
+
+  .remove-btn,
+  .save-btn{
+    flex:1;
+    min-width:120px;
+  }
+
+  .cart-right{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    text-align:left;
+  }
+
+  .cart-right h4{
+    margin:0;
+    font-size:20px;
+  }
+
+  .quantity-box{
+    margin-top:0;
+  }
+
+  .cart-bottom{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .cart-bottom button{
+    width:100%;
+  }
+
+  .empty-cart{
+    padding:40px 20px;
+  }
+
+  .empty-cart h2{
+    font-size:24px;
+  }
+
+  .empty-cart p{
+    font-size:14px;
+  }
+
+  .empty-cart button{
+    width:100%;
+  }
+
+}

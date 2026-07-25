@@ -36,6 +36,12 @@
     cursor:pointer;
 }
 
+.newsletter-error{
+    color:red;
+    font-size:13px;
+    margin-top:10px;
+}
+
 /* media query */
 
 /* Mobile Responsive */

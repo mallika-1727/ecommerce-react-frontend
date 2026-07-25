@@ -50,3 +50,52 @@
     font-size:15px;
     font-weight:600;
 }
+
+
+
+/* ===========================
+   Discount Banner Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .discount-banner{
+    margin:15px;
+    height:auto;
+    flex-direction:column;
+    align-items:flex-start;
+    border-radius:8px;
+  }
+
+  .discount-left{
+    width:100%;
+    padding:20px;
+    box-sizing:border-box;
+  }
+
+  .discount-left h3{
+    font-size:20px;
+    line-height:28px;
+  }
+
+  .discount-left p{
+    font-size:14px;
+    margin-top:8px;
+  }
+
+  .discount-right{
+    width:100%;
+    clip-path:none;
+    justify-content:center;
+    padding:18px;
+    box-sizing:border-box;
+    background:#072c64;
+  }
+
+  .discount-right button{
+    width:100%;
+    max-width:220px;
+    height:45px;
+  }
+
+}

@@ -91,3 +91,49 @@
     color:#0D6EFD;
 }
 
+
+/* ===========================
+   Saved Products Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .saved-products{
+    margin:15px;
+    padding:15px;
+  }
+
+  .saved-grid{
+    grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  .saved-card{
+    padding:15px;
+  }
+
+  .saved-image{
+    width:140px;
+    height:140px;
+  }
+
+  .saved-image img{
+    width:75%;
+    height:75%;
+  }
+
+  .saved-card h4{
+    font-size:18px;
+  }
+
+  .saved-card p{
+    font-size:14px;
+    margin-bottom:12px;
+  }
+
+  .move-cart-btn{
+    width:100%;
+  }
+
+}
+

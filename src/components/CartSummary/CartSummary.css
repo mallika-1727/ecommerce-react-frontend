@@ -94,3 +94,61 @@
 .applepay{
     color:#000;
 }
+
+
+
+/* ===========================
+   Cart Summary Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .cart-summary{
+    width:100%;
+  }
+
+  .coupon-box,
+  .summary-box{
+    width:100%;
+    box-sizing:border-box;
+    padding:15px;
+  }
+
+  .coupon-input{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .coupon-input input{
+    width:100%;
+    border-radius:6px;
+  }
+
+  .coupon-input button{
+    width:100%;
+    border-radius:6px;
+    border:1px solid #DEE2E7;
+  }
+
+  .summary-row,
+  .summary-total{
+    font-size:14px;
+  }
+
+  .checkout-btn{
+    width:100%;
+    height:46px;
+    font-size:16px;
+  }
+
+  .payment-icons{
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+  }
+
+  .pay-icon{
+    font-size:34px;
+  }
+
+}

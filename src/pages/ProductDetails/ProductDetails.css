@@ -23,3 +23,24 @@
     margin:20px 40px;
     align-items:flex-start;
 }
+
+/* ===========================
+   Product Details Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .product-wrapper{
+    flex-direction:column;
+    margin:15px;
+    padding:15px;
+    gap:20px;
+  }
+
+  .product-middle-section{
+    flex-direction:column;
+    padding:15px;
+    gap:20px;
+  }
+
+}

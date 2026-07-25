@@ -42,3 +42,45 @@
     height:100%;
     object-fit:contain;   
 }
+
+/* ===========================
+   Product Gallery Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .product-gallery{
+    width:100%;
+  }
+
+  .main-image{
+    width:100%;
+    height:280px;
+  }
+
+  .main-image img{
+    max-width:90%;
+    max-height:90%;
+    object-fit:contain;
+  }
+
+  .thumbnail-images{
+    width:100%;
+    overflow-x:auto;
+    display:flex;
+    gap:10px;
+    padding-bottom:5px;
+    scrollbar-width:none;
+  }
+
+  .thumbnail-images::-webkit-scrollbar{
+    display:none;
+  }
+
+  .thumb{
+    flex:0 0 60px;
+    width:60px;
+    height:60px;
+  }
+
+}

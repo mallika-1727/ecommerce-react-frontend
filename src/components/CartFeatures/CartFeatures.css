@@ -35,3 +35,39 @@
     color:#8B96A5;
     font-size:14px;
 }
+
+
+/* ===========================
+   Cart Features Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .cart-features{
+    flex-direction:column;
+    gap:20px;
+    padding:15px;
+  }
+
+  .feature-card{
+    align-items:flex-start;
+    gap:15px;
+  }
+
+  .feature-icon{
+    width:45px;
+    height:45px;
+    font-size:18px;
+    flex-shrink:0;
+  }
+
+  .feature-card h4{
+    font-size:15px;
+  }
+
+  .feature-card p{
+    font-size:13px;
+    margin-top:4px;
+  }
+
+}

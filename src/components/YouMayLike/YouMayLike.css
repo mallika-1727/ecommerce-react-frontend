@@ -45,3 +45,50 @@
     color:#8B96A5;
     font-size:13px;
 }
+
+
+/* ===========================
+   You May Like Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .you-may-like{
+    width:100%;
+    padding:15px;
+    box-sizing:border-box;
+  }
+
+  .you-may-like h3{
+    margin-bottom:15px;
+    font-size:18px;
+  }
+
+  .like-item{
+    align-items:center;
+    gap:12px;
+    margin-bottom:15px;
+  }
+
+  .like-image{
+    width:70px;
+    height:70px;
+    flex-shrink:0;
+  }
+
+  .like-image img{
+    width:80%;
+    height:80%;
+  }
+
+  .like-item p{
+    font-size:14px;
+    line-height:20px;
+    margin-bottom:4px;
+  }
+
+  .like-item span{
+    font-size:13px;
+  }
+
+}

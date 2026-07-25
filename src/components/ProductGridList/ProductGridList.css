@@ -93,7 +93,7 @@
 }
 
 .grid-image{
-    width:120px;
+    width:180px;
     height:200px;
     background:#F7F7F7;
     border-radius:6px;
@@ -155,7 +155,7 @@
 .grid-link{
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
 }
 
 .products-grid{
@@ -166,44 +166,55 @@
 }
 
 .grid-link{
-    display: block;
+    display: flex;
     text-decoration: none;
     color: inherit;
 }
 
-/* ===========================
-   Product Grid Mobile
-=========================== */
 
 @media (max-width:768px){
 
+  .grid-container{
+    padding:0 15px 20px;
+  }
+
+  .grid-filter-sidebar{
+    display:none;
+  }
+
   .grid-top{
+    display:flex;
     flex-direction:column;
-    align-items:stretch;
+    align-items:flex-start;
     gap:12px;
     padding:15px;
   }
 
   .items-count{
     font-size:14px;
+    line-height:20px;
   }
 
   .top-right{
+    display:flex;
+    width:100%;
+    justify-content:space-between;
+    align-items:center;
     flex-wrap:wrap;
     gap:10px;
-    justify-content:space-between;
   }
 
   .top-right select{
-    width:100%;
+    width:120px;
+    height:38px;
   }
 
   .filter-tags{
     display:flex;
-    overflow-x:auto;
     gap:10px;
-    padding-bottom:8px;
+    overflow-x:auto;
     white-space:nowrap;
+    padding:10px 15px;
     scrollbar-width:none;
   }
 
@@ -221,36 +232,58 @@
   }
 
   .grid-card{
-    flex-direction:column;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
     height:auto;
     padding:15px;
-    align-items:center;
+    gap:15px;
   }
 
   .grid-image{
-    width:100%;
-    height:180px;
-    border-bottom:none;
-    margin-bottom:15px;
+    width:110px;
+    height:110px;
+    flex-shrink:0;
+    border:none;
+    background:#F7F7F7;
+    margin:0;
   }
 
   .grid-image img{
-    width:150px;
-    height:150px;
+    width:90px;
+    height:90px;
+    object-fit:contain;
   }
 
   .grid-content{
-    width:100%;
+    flex:1;
     padding:0;
   }
 
   .grid-content h3{
     font-size:18px;
+    margin-bottom:8px;
   }
 
   .product-name{
     font-size:14px;
+    line-height:22px;
+    margin-bottom:8px;
+  }
+
+  .grid-rating{
+    font-size:13px;
+    flex-wrap:wrap;
+  }
+
+  .pagination-wrapper{
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+  }
+
+  .pagination{
+    justify-content:center;
   }
 
 }
-

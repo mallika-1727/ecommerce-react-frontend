@@ -1,0 +1,166 @@
+.checkout-page{
+    padding:40px;
+    background:#F7FAFC;
+    min-height:100vh;
+}
+
+
+
+.checkout-page h2{
+    margin-bottom:30px;
+    font-size:28px;
+    color:#1C1C1C;
+    text-align:left;
+}
+
+.checkout-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+    width:100%;
+}
+
+
+
+/* Shipping Form */
+
+.shipping-form{
+    width:68%;
+    background:#fff;
+    border:1px solid #DEE2E7;
+    border-radius:8px;
+    padding:25px;
+    box-sizing:border-box;
+}
+
+
+.shipping-form h3{
+    margin-bottom:20px;
+    text-align:left;
+}
+
+.shipping-form form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.shipping-form input,
+.shipping-form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #DEE2E7;
+    border-radius:6px;
+    font-size:15px;
+    outline:none;
+    box-sizing:border-box;
+}
+
+.shipping-form textarea{
+    resize:none;
+    height:100px;
+}
+
+.shipping-form input:focus,
+.shipping-form textarea:focus{
+    border-color:#127FFF;
+}
+
+.place-order-btn{
+    margin-top:10px;
+    padding:14px;
+    background:#127FFF;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.place-order-btn:hover{
+    background:#0D6EFD;
+}
+
+/* Order Summary */
+
+.order-summary{
+    width:30%;
+    background:#fff;
+    border:1px solid #DEE2E7;
+    border-radius:8px;
+    padding:25px;
+    box-sizing:border-box;
+}
+
+
+
+.order-summary h3{
+    margin-bottom:20px;
+    text-align:left;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+    font-size:15px;
+}
+
+.summary-total{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.order-summary hr{
+    margin:20px 0;
+    border:none;
+    border-top:1px solid #E5E7EB;
+}
+
+.error{
+    color:#FA3434;
+    font-size:13px;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+
+
+.shipping-form input,
+.shipping-form textarea{
+    margin-bottom:5px;
+}
+
+.shipping-form input:focus,
+.shipping-form textarea:focus{
+    border:1px solid #127FFF;
+}
+
+.shipping-form input,
+.shipping-form textarea{
+    transition:.3s;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.checkout-page{
+    padding:20px 15px;
+}
+
+.checkout-container{
+    flex-direction:column;
+}
+
+.shipping-form,
+.order-summary{
+    width:100%;
+}
+
+}
+

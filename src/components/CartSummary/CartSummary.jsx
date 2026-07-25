@@ -1,6 +1,7 @@
 import "./CartSummary.css";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import { useNavigate } from "react-router-dom";
 import {
   FaCcVisa,
   FaCcMastercard,
@@ -21,6 +22,8 @@ function CartSummary() {
   const tax = subtotal * 0.01;
 
   const total = subtotal - discount + tax;
+
+  const navigate = useNavigate();
 
   return (
     <div className="cart-summary">
@@ -66,9 +69,12 @@ function CartSummary() {
           <strong>${total.toFixed(2)}</strong>
         </div>
 
-        <button className="checkout-btn">
-          Checkout
-        </button>
+        <button
+  className="checkout-btn"
+  onClick={() => navigate("/checkout")}
+>
+  Checkout
+</button>
 
         <div className="payment-icons">
           <FaCcVisa className="pay-icon visa" />

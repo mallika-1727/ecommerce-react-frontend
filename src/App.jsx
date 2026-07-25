@@ -5,7 +5,11 @@ import ProductListing from "./pages/ProductListing/ProductListing";
 import ProductGrid from "./pages/ProductGrid/ProductGrid";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Cart from "./pages/Cart/Cart";
-
+import Login from "./pages/Login/Login";
+import Signup from "./pages/Signup/Signup";
+import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import Checkout from "./pages/Checkout/Checkout";
+import OrderSuccess from "./pages/OrderSuccess/OrderSuccess";
 function App() {
   return (
     <Routes>
@@ -23,6 +27,26 @@ function App() {
 
       {/* Cart */}
       <Route path="/cart" element={<Cart />} />
+
+      <Route
+path="/login"
+element={<Login/>}
+/>
+
+<Route path="/signup" element={<Signup />} />
+
+<Route
+  path="/forgot-password"
+  element={<ForgotPassword />}
+/>
+
+<Route path="/checkout" element={<Checkout />} />
+
+<Route
+  path="/order-success"
+  element={<OrderSuccess />}
+/>
+
     </Routes>
   );
 }

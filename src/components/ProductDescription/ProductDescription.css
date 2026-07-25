@@ -45,7 +45,7 @@ table td{
     text-align:left;
 }
 
-table td:frist-child{
+table td:first-child{
     background:#EFF2F4;
     color:#505050;
     font-weight:500;
@@ -69,4 +69,64 @@ ul li{
 
 .feature-list li{
     margin:10px 0;
+}
+
+
+/* ===========================
+   Product Description Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .product-description{
+    width:100%;
+    padding:15px;
+    box-sizing:border-box;
+  }
+
+  .tabs{
+    gap:18px;
+    overflow-x:auto;
+    white-space:nowrap;
+    scrollbar-width:none;
+  }
+
+  .tabs::-webkit-scrollbar{
+    display:none;
+  }
+
+  .tabs button{
+    flex-shrink:0;
+    font-size:14px;
+  }
+
+  .description-content p{
+    font-size:14px;
+    line-height:24px;
+  }
+
+  table{
+    width:100%;
+    display:block;
+    overflow-x:auto;
+  }
+
+  table tbody{
+    width:100%;
+  }
+
+  table td{
+    font-size:14px;
+    padding:10px;
+  }
+
+  .feature-list{
+    padding-left:0;
+  }
+
+  .feature-list li{
+    font-size:14px;
+    line-height:22px;
+  }
+
 }

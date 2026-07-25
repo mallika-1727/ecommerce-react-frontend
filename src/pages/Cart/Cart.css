@@ -4,3 +4,18 @@
     padding:20px 40px;
     align-items:flex-start;
 }
+
+
+/* ===========================
+   Cart Page Mobile
+=========================== */
+
+@media (max-width:768px){
+
+  .cart-top{
+    flex-direction:column;
+    padding:15px;
+    gap:15px;
+  }
+
+}
