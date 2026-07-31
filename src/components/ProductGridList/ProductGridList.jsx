@@ -1,21 +1,30 @@
 import { Link } from "react-router-dom";
 import "./ProductGridList.css";
-import cameraImg1 from "../../assets/1.jpg";
-import camerago from "../../assets/1.jpg";
-import watch from "../../assets/8.jpg";
-import laptop from "../../assets/7.jpg";
-import cameragopro from "../../assets/4.jpg";
-import phone6 from "../../assets/4.jpg";
-import phone4 from "../../assets/2.png";
-import phone3 from "../../assets/3.jpg";
-import camera from "../../assets/6.jpg";
+import { useEffect, useState } from "react";
+import API from "../../services/api";
+
 function ProductGridList() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await API.get("/products");
+        setProducts(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
     <div className="product-grid-list">
 
       <div className="grid-top">
         <div className="items-count">
-          <b>12,911</b> items in <b>Mobile accessory</b>
+          <b>{products.length}</b> items
         </div>
 
         <div className="top-right">
@@ -43,136 +52,46 @@ function ProductGridList() {
 
         <a href="/">Clear all filter</a>
       </div>
-       
-       <div className="products-grid">
 
-  <Link to="/product-details" className="grid-link">
-  <div className="grid-card">
+      <div className="products-grid">
+        {products.map((product) => (
+          <Link
+            key={product._id}
+            to={`/product-details/${product._id}`}
+            className="grid-link"
+          >
+            <div className="grid-card">
 
-    <div className="grid-image">
-      <img src={cameraImg1} alt="product" />
-    </div>
+              <div className="grid-image">
+  <img
+    src={`http://localhost:5000/uploads/${product.image}`}
+    alt={product.name}
+    style={{
+      width: "180px",
+      height: "180px",
+      objectFit: "contain"
+    }}
+  />
+</div>
 
-    <div className="grid-content">
-      <h3>$998.00</h3>
-      <p className="product-name">
-        Canon Camera EOS 2000,Black 10x Zoom
-      </p>
-      <div className="grid-rating">
-        ⭐⭐⭐⭐⭐ <span>7.5</span>
+              <div className="grid-content">
+                <h3>₹{product.price}</h3>
+
+                <p className="product-name">
+                  {product.name}
+                </p>
+
+                <div className="grid-rating">
+                  ⭐⭐⭐⭐⭐ <span>7.5</span>
+                </div>
+              </div>
+
+            </div>
+          </Link>
+        ))}
       </div>
-    </div>
-    </div>
-</Link>
-   
-  
- <Link to="/product-details" className="grid-link">
-  <div className="grid-card">
-       <div className="grid-image">
-  <img src={cameragopro} alt="cameragopro" />
-</div>
-    <div className="grid-content">
-      <h3>$998.00</h3>
-      <p className="product-name">Canon Camera EOS 2000,Black 10x Zoom</p>
-      <div className="grid-rating">⭐⭐⭐⭐⭐ <span>7.5</span></div>
-    </div>
-  </div>
-  </Link>
- <Link to="/product-details" className="grid-link">
-  <div className="grid-card">
-     <div className="grid-image">
-  <img src={phone3} alt="phone3" />
-</div>
-    <div className="grid-content">
-      <h3>$998.00</h3>
-      <p className="product-name">Canon Camera EOS 2000,Black 10x Zoom</p>
-      <div className="grid-rating">⭐⭐⭐⭐⭐ <span>7.5</span></div>
-    </div>
-  </div>
 
-  </Link>
-<Link to="/product-details" className="grid-link">
-  <div className="grid-card">
-      <div className="grid-image">
-  <img src={phone4} alt="phone4" />
-</div>
-    <div className="grid-content">
-      <h3>$998.00</h3>
-      <p className="product-name">Canon Camera EOS 2000,Black 10x Zoom</p>
-      <div className="grid-rating">⭐⭐⭐⭐⭐ <span>7.5</span></div>
     </div>
-  </div>
-</Link>
-
-<Link to="/product-details" className="grid-link">
-  <div className="grid-card">
-      <div className="grid-image">
-  <img src={camera} alt="camera" />
-</div>
-    <div className="grid-content">
-      <h3>$998.00</h3>
-      <p className="product-name">Canon Camera EOS 2000,Black 10x Zoom</p>
-      <div className="grid-rating">⭐⭐⭐⭐⭐ <span>7.5</span></div>
-    </div>
-  </div>
-</Link>
-
-<Link to="/product-details" className="grid-link">
-  <div className="grid-card">
-      <div className="grid-image">
-  <img src={phone6} alt="phone6" />
-</div>
-    <div className="grid-content">
-      <h3>$998.00</h3>
-      <p className="product-name">Canon Camera EOS 2000,Black 10x Zoom</p>
-      <div className="grid-rating">⭐⭐⭐⭐⭐ <span>7.5</span></div>
-    </div>
-  </div>
-</Link>
-
-<Link to="/product-details" className="grid-link">
-  <div className="grid-card">
-       <div className="grid-image">
-  <img src={laptop} alt="laptop" />
-</div>
-    <div className="grid-content">
-      <h3>$998.00</h3>
-      <p className="product-name">Canon Camera EOS 2000,Black 10x Zoom</p>
-      <div className="grid-rating">⭐⭐⭐⭐⭐ <span>7.5</span></div>
-    </div>
-  </div>
-</Link>
-
-<Link to="/product-details" className="grid-link">
-  <div className="grid-card">
-      <div className="grid-image">
-  <img src={watch} alt="watch" />
-</div>
-    <div className="grid-content">
-      <h3>$998.00</h3>
-      <p className="product-name">Canon Camera EOS 2000,Black 10x Zoom</p>
-      <div className="grid-rating">⭐⭐⭐⭐⭐ <span>7.5</span></div>
-    </div>
-  </div>
-</Link>
-
-<Link to="/product-details" className="grid-link">
-  <div className="grid-card">
-     <div className="grid-image">
-  <img src={camerago} alt="camerago" />
-</div>
-    <div className="grid-content">
-      <h3>$998.00</h3>
-      <p className="product-name">Canon Camera EOS 2000,Black 10x Zoom</p>
-      <div className="grid-rating">⭐⭐⭐⭐⭐ <span>7.5</span></div>
-    </div>
-  </div>
-</Link>
-</div>
-</div>
-    
-   
-    
   );
 }
 

@@ -1,6 +1,7 @@
 
 import { useParams } from "react-router-dom";
-import products from "../../data/products.json";
+import { useEffect, useState } from "react";
+import API from "../../services/api";
 
 
 import "./ProductDetails.css";
@@ -18,11 +19,56 @@ import DiscountBanner from "../../components/DiscountBanner/DiscountBanner";
 import Footer from "../../components/Footer/Footer";
 function ProductDetails() {
 
+
+
 const { id } = useParams();
 
-const product = products.find(
-  (item) => item.id === Number(id)
-);
+console.log(id);
+const [product, setProduct] = useState(null);
+const [loading, setLoading] = useState(true);
+const [error, setError] = useState("");
+
+
+useEffect(() => {
+
+  const fetchProduct = async () => {
+
+    try {
+
+      setLoading(true);
+
+      const response = await API.get(`/products/${id}`);
+
+      setProduct(response.data);
+
+    } catch (error) {
+
+      console.log(error);
+      setError("Failed to load product");
+
+    } finally {
+
+      setLoading(false);
+
+    }
+
+  };
+
+
+  fetchProduct();
+
+}, [id]);
+
+
+
+if (loading) {
+  return <h2>Loading product...</h2>;
+}
+
+
+if (error) {
+  return <h2>{error}</h2>;
+}
 
   return (
     <>

@@ -1,52 +1,45 @@
-# Ecommerce React Frontend
+# Ecommerce Frontend Design
 
-## Week 1
-- Home Page
-- Navbar
-- Hero Section
-- Product Sections
-- Responsive Layout
+## Frontend
 
-## Week 2
-- React Router
-- Dynamic Product Listing
-- Product Details Page
-- Search Functionality
-- Category Filter
-- JSON Data Integration
-- Dynamic Image Rendering
+```bash
+npm install
+npm run dev
+```
 
- ## Week 3
-- Add to Cart functionality
-- Cart Page with product image, name, price, and quantity
-- Increase/Decrease quantity controls
-- Remove item from cart
-- Dynamic total price calculation
-- Empty cart UI
-- Global state management using React Context API
-- Navbar cart item counter
-- localStorage integration for cart persistence
-- Responsive cart page
-- Clean and reusable component-based architecture
+Runs at:
+http://localhost:5173
 
-## Technologies Used
+## Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+Runs at:
+http://localhost:5000
+
+## API Endpoints
+
+GET /api/products
+
+GET /api/products/:id
+
+## Tech Stack
+
 - React
-- Vite
-- React Router DOM
-- CSS
-- JSON
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Axios
 
-## Future Improvements
-- User Authentication
-- Wishlist
-- Checkout Page
-- Payment Integration
-- Order History
-- Search and Sorting
-- Product Reviews
+## Environment Variables
 
-## Author
-Mallika Devi
+Create a `.env` file inside the backend folder:
 
-Frontend Web Development Intern
-IT-Simplera Solutions
+```
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+```

@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import products from "../../data/products.json";
+import { useEffect } from "react";
+import API from "../../services/api";
 import { FaRegHeart } from "react-icons/fa";
 import { CartContext } from "../../context/CartContext";
 import "./ProductList.css";
@@ -22,9 +23,44 @@ const imageMap = {
 function ProductList() {
 
  const { addToCart } = useContext(CartContext);
+const [products, setProducts] = useState([]);
+const [search, setSearch] = useState("");
+const [category, setCategory] = useState("All");
+const [loading, setLoading] = useState(true);
+const [error, setError] = useState("");
 
-  const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("All");
+{loading && <h2>Loading products...</h2>}
+
+{error && <h2>{error}</h2>}
+
+useEffect(() => {
+
+  const fetchProducts = async () => {
+
+    try {
+
+      setLoading(true);
+
+      const response = await API.get("/products");
+
+      setProducts(response.data);
+
+    } catch (error) {
+
+      console.log(error);
+      setError("Failed to load products");
+
+    } finally {
+
+      setLoading(false);
+
+    }
+
+  };
+
+  fetchProducts();
+
+}, []);
 
 const filteredProducts = products.filter((item) => {
   const matchesSearch = item.name
@@ -91,15 +127,23 @@ const filteredProducts = products.filter((item) => {
   </div>
 
 </div>
-{filteredProducts.map((item) => (
-  <div className="product-card" key={item.id}>
 
-    <div className="product-image">
-      <img
-        src={imageMap[item.image]}
-        alt={item.name}
-      />
-    </div>
+{loading && (
+  <h2>Loading products...</h2>
+)}
+
+{error && (
+  <h2>{error}</h2>
+)}
+
+{filteredProducts.map((item) => (
+  <div className="product-card" key={item._id}>
+
+
+<img
+ src={`http://localhost:5000/uploads/${item.image}`}
+ alt={item.name}
+/>
 
     <div className="product-details">
 
@@ -126,7 +170,7 @@ const filteredProducts = products.filter((item) => {
       </p>
 
       <Link
-        to={`/product-details/${item.id}`}
+        to={`/product-details/${item._id}`}
         className="view-details"
       >
         View Details
