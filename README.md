@@ -99,3 +99,68 @@ Implemented REST APIs:
 
 GET all products
 
+
+GET single product
+
+### Frontend Backend Connection
+- Connected React frontend with backend APIs
+- Fetching products using Axios
+- Displaying backend data
+- Added loading state
+- Added error handling
+
+---
+
+# Tech Stack
+
+## Frontend
+- React.js
+- Vite
+- Axios
+- React Router
+- CSS
+
+## Backend
+- Node.js
+- Express.js
+
+## Database
+- MongoDB Atlas
+- Mongoose
+
+## Tools
+- VS Code
+- Postman
+- GitHub
+
+---
+
+# How to Run
+
+## Frontend
+
+---
+
+# Project Features
+
+- Ecommerce UI
+- Product listing
+- Product details
+- Cart system
+- Backend API integration
+- MongoDB database
+- Product image handling
+- Loading and error handling
+
+---
+
+# GitHub Repository
+
+(Add your repository link here)
+
+---
+
+# Author
+
+Mallika Devi
+
