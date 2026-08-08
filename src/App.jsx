@@ -7,7 +7,7 @@ import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Cart from "./pages/Cart/Cart";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
-import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import ForgotPassword from "./pages/Forgotpassword/ForgotPassword";
 import Checkout from "./pages/Checkout/Checkout";
 import OrderSuccess from "./pages/OrderSuccess/OrderSuccess";
 
