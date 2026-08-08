@@ -7,9 +7,10 @@ import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Cart from "./pages/Cart/Cart";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
-import ForgotPassword from "./pages/Forgotpassword/ForgotPassword";
-import Checkout from "./pages/Checkout/Checkout";
-import OrderSuccess from "./pages/OrderSuccess/OrderSuccess";
+import ForgotPassword from "./pages/Forgotpassword/Forgotpassword";
+import Checkout from "./pages/checkout/checkout";
+import OrderSuccess from "./pages/ordersuccess/ordersuccess";
+
 
 import ProtectedRoute from "./ProtectedRoute";
 
