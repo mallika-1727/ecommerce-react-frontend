@@ -10,43 +10,70 @@ import Signup from "./pages/Signup/Signup";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import Checkout from "./pages/Checkout/Checkout";
 import OrderSuccess from "./pages/OrderSuccess/OrderSuccess";
+
+import ProtectedRoute from "./ProtectedRoute";
+
 function App() {
   return (
     <Routes>
       {/* Home */}
       <Route path="/" element={<Home />} />
 
-      {/* Product Listing (6 horizontal cards) */}
-      <Route path="/product-listing" element={<ProductListing />} />
+      {/* Product Listing */}
+      <Route
+        path="/product-listing"
+        element={<ProductListing />}
+      />
 
-      {/* Product Grid (3×3 Grid) */}
-      <Route path="/product-grid" element={<ProductGrid />} />
+      {/* Product Grid */}
+      <Route
+        path="/product-grid"
+        element={<ProductGrid />}
+      />
 
       {/* Product Details */}
-      <Route path="/product-details/:id" element={<ProductDetails />} />
-
-      {/* Cart */}
-      <Route path="/cart" element={<Cart />} />
-
       <Route
-path="/login"
-element={<Login/>}
-/>
+        path="/product-details/:id"
+        element={<ProductDetails />}
+      />
 
-<Route path="/signup" element={<Signup />} />
+      {/* Cart - Login Required */}
+      <Route
+        path="/cart"
+        element={
+          <ProtectedRoute>
+            <Cart />
+          </ProtectedRoute>
+        }
+      />
 
-<Route
-  path="/forgot-password"
-  element={<ForgotPassword />}
-/>
+      {/* Login */}
+      <Route path="/login" element={<Login />} />
 
-<Route path="/checkout" element={<Checkout />} />
+      {/* Signup */}
+      <Route path="/signup" element={<Signup />} />
 
-<Route
-  path="/order-success"
-  element={<OrderSuccess />}
-/>
+      {/* Forgot Password */}
+      <Route
+        path="/forgot-password"
+        element={<ForgotPassword />}
+      />
 
+      {/* Checkout - Login Required */}
+      <Route
+        path="/checkout"
+        element={
+          <ProtectedRoute>
+            <Checkout />
+          </ProtectedRoute>
+        }
+      />
+
+      {/* Order Success */}
+      <Route
+        path="/order-success"
+        element={<OrderSuccess />}
+      />
     </Routes>
   );
 }

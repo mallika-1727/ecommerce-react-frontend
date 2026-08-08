@@ -1,10 +1,10 @@
 import "./Checkout.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Checkout() {
-
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -70,16 +70,59 @@ function Checkout() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  if(validate()){
-    navigate("/order-success");
-  }
-};
+    if (!validate()) {
+      return;
+    }
+
+    try {
+      const token = localStorage.getItem("token");
+
+      if (!token) {
+        alert("Please login to place an order.");
+        navigate("/login");
+        return;
+      }
+
+      const orderData = {
+        products: [
+          {
+            product: "6a6c424c184d62010312c2b0",
+            quantity: 2,
+            price: 800,
+          },
+        ],
+        totalPrice: 1600,
+      };
+
+      const response = await axios.post(
+        "http://localhost:5000/api/orders",
+        orderData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (response.status === 201) {
+        alert("Order placed successfully! ✅");
+        navigate("/order-success");
+      }
+    } catch (error) {
+      console.error("Order Error:", error);
+
+      alert(
+        error.response?.data?.message ||
+          "Failed to place order. Please try again."
+      );
+    }
+  };
 
   return (
-    <div className="checkout-page">
+    <div>
       <h2>Checkout</h2>
 
       <div className="checkout-container">
@@ -99,6 +142,7 @@ function Checkout() {
               value={formData.fullName}
               onChange={handleChange}
             />
+
             {errors.fullName && (
               <p className="error">{errors.fullName}</p>
             )}
@@ -110,6 +154,7 @@ function Checkout() {
               value={formData.email}
               onChange={handleChange}
             />
+
             {errors.email && (
               <p className="error">{errors.email}</p>
             )}
@@ -121,6 +166,7 @@ function Checkout() {
               value={formData.phone}
               onChange={handleChange}
             />
+
             {errors.phone && (
               <p className="error">{errors.phone}</p>
             )}
@@ -131,6 +177,7 @@ function Checkout() {
               value={formData.address}
               onChange={handleChange}
             ></textarea>
+
             {errors.address && (
               <p className="error">{errors.address}</p>
             )}
@@ -142,6 +189,7 @@ function Checkout() {
               value={formData.city}
               onChange={handleChange}
             />
+
             {errors.city && (
               <p className="error">{errors.city}</p>
             )}
@@ -153,6 +201,7 @@ function Checkout() {
               value={formData.state}
               onChange={handleChange}
             />
+
             {errors.state && (
               <p className="error">{errors.state}</p>
             )}
@@ -164,6 +213,7 @@ function Checkout() {
               value={formData.pincode}
               onChange={handleChange}
             />
+
             {errors.pincode && (
               <p className="error">{errors.pincode}</p>
             )}

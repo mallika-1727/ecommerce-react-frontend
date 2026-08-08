@@ -1,6 +1,8 @@
+
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -10,7 +12,9 @@ function Login() {
 
   const [errors, setErrors] = useState({});
 
-  const handleLogin = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = async () => {
     let newErrors = {};
 
     if (!email.trim()) {
@@ -28,13 +32,39 @@ function Login() {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      alert("Login Successful ✅");
+      try {
+        const response = await axios.post(
+          "http://localhost:5000/api/auth/login",
+          {
+            email,
+            password,
+          }
+        );
+
+        // Store JWT token in localStorage
+        localStorage.setItem("token", response.data.token);
+
+        // Store user details in localStorage
+        localStorage.setItem(
+          "user",
+          JSON.stringify(response.data.user)
+        );
+
+        alert("Login Successful ✅");
+
+        // Go to Home page
+        navigate("/");
+      } catch (error) {
+        alert(
+          error.response?.data?.message ||
+            "Login failed. Please try again."
+        );
+      }
     }
   };
 
   return (
     <div className="login-page">
-
       <form
         className="login-box"
         onSubmit={(e) => {
@@ -42,7 +72,6 @@ function Login() {
           handleLogin();
         }}
       >
-
         <h2>Login</h2>
 
         <input
@@ -57,7 +86,6 @@ function Login() {
         )}
 
         <div className="password-box">
-
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
@@ -71,7 +99,6 @@ function Login() {
           >
             {showPassword ? "Hide" : "Show"}
           </span>
-
         </div>
 
         {errors.password && (
@@ -83,20 +110,13 @@ function Login() {
         </button>
 
         <p>
-  <Link to="/forgot-password">
-    Forgot Password?
-  </Link>
-</p>
-
-        <p>
           Don't have an account?
           <Link to="/signup"> Signup</Link>
         </p>
-
       </form>
-
     </div>
   );
 }
 
 export default Login;
+
